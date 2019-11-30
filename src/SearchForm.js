@@ -1,6 +1,8 @@
 import React from "react";
 import "./SearchForm.css";
 import CityIcon from "./cityIcon.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 export default function SearchForm () {
     return ( <div className="row">
     <div className="col-xs-6">
@@ -13,13 +15,13 @@ export default function SearchForm () {
           autoComplete="off"
         />
         <button id="searchButton">
-          <i className="fas fa-search" />
+        <FontAwesomeIcon icon="search" id="searchIcon"/>
         </button>
       </form>
     </div>
     <div className="col-xs-4">
       <button id="currentLocation">
-        <i className="fas fa-map-marker-alt" />
+      <FontAwesomeIcon icon="map-marker-alt" id="mapMarkerIcon"/>
       </button>
     </div>
     <div className="col-12">

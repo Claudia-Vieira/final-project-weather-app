@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./Day.css";
 export default function Day(props) {
   return (
@@ -8,7 +9,7 @@ export default function Day(props) {
       </div>
       <div className="col-1">
         <p>
-          <i className="far fa-dot-circle" id="dot1" />
+        <FontAwesomeIcon icon="dot-circle" id="dot1" />
         </p>
       </div>
       <div className="col-3">
@@ -28,7 +29,7 @@ export default function Day(props) {
         <div className="row">
           <div className="col-6 weatherIconDays">
             <p id="icon_one">
-              <i className="fas fa-wind currentWind" />
+            <FontAwesomeIcon icon="wind" className="currentWind" />
             </p>
           </div>
           <div className="col-6 weatherDays">

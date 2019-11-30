@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./CurrentWeather.css";
 export default function CurrentWeather () {
     return (  <div>
@@ -29,7 +30,7 @@ export default function CurrentWeather () {
           </div>
           <div className="row">
             <div className="col-xs-4">
-              <i className="fas fa-wind currentWind" />
+            <FontAwesomeIcon icon="wind" className="currentWind" />
               <span id="wind"> </span>
             </div>
           </div>

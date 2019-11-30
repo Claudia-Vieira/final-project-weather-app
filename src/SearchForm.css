@@ -10,10 +10,10 @@
     background-color: #b7dcff;
     margin: 10px;
   }
-  #searchButton i {
+  #searchIcon{
     color: grey;
   }
-  #currentLocation i {
+  #mapMarkerIcon {
     color: red;
   }
   #currentCity {

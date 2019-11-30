@@ -1,8 +1,19 @@
 import React from 'react';
+
 import SearchForm from './SearchForm.js';
 import CurrentWeather from './CurrentWeather.js';
 import Forecast from './Forecast.js';
 import './App.css';
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faWind } from '@fortawesome/free-solid-svg-icons'
+import { faDotCircle } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faSearch, faMapMarkerAlt, faWind, faDotCircle);
+
 
 function App() {
   return (
