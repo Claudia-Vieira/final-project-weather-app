@@ -25,7 +25,7 @@ export default function Day(props) {
           </div>
         </div>
       </div>
-      <div className="col-2">
+      <div className="col-3">
         <div className="row">
           <div className="col-6 weatherIconDays">
             <p id="icon_one">

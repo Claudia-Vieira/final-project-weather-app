@@ -35,7 +35,7 @@ function App() {
     </div>
     <small>
       <a
-        href="https://github.com/Claudia-Vieira/Weather-Project"
+        href="https://github.com/Claudia-Vieira/final-project-weather-app"
         target="_blank"
       >
         Open-source code
