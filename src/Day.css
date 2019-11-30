@@ -1,0 +1,33 @@
+#dot1 {
+    color: #fb7398;
+  }
+  #weatherIcon {
+    font-size: 200px;
+    text-align: center;
+    padding: 50px;
+  }
+  #icon_one {
+    width: 50px;
+    padding: 0;
+    margin: 0;
+  }
+  .weatherIconDays {
+    text-align: right;
+  }
+  .weatherDays {
+    text-align: left;
+    padding: 0px;
+  }
+  .currentWind {
+    text-align: right;
+    color: grey;
+    font-size: 30px;
+  }
+  
+  #wind_one {
+    display: block;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+  }
+  

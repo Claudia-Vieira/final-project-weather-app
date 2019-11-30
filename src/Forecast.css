@@ -1,0 +1,13 @@
+.forecast_title {
+    font-size: 20px;
+    color: blue;
+    text-align: center;
+  }
+  .fiveDays {
+    font-size: 20px;
+    text-align: center;
+  }
+  #forecast {
+    text-align: center;
+  }
+  

@@ -1,0 +1,25 @@
+.cityIcon {
+    width: 50px;
+  }
+  #enterCity {
+    border-radius: 10px;
+  }
+  #searchButton,
+  #currentLocation {
+    border-radius: 50px;
+    background-color: #b7dcff;
+    margin: 10px;
+  }
+  #searchButton i {
+    color: grey;
+  }
+  #currentLocation i {
+    color: red;
+  }
+  #currentCity {
+    display: block;
+    color: grey;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
