@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import SearchForm from './SearchForm.js';
+import CurrentWeather from './CurrentWeather.js';
+import Forecast from './Forecast.js';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+    <div className="weatherapp">
+      <div>
+        <SearchForm />
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <p id="currentDate" />
+        </div>
+      </div>
+      <div className="row">
+        <CurrentWeather />
+      </div>
+      <hr />
+      <Forecast />
     </div>
-  );
+    <small>
+      <a
+        href="https://github.com/Claudia-Vieira/Weather-Project"
+        target="_blank"
+      >
+        Open-source code
+      </a>
+      , by Cláudia Vieira
+    </small>
+  </div>
+);
 }
 
 export default App;
