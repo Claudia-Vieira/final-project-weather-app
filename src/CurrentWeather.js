@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Loader from 'react-loader-spinner';
 import TemperatureSetting from "./TemperatureSetting.js";
+import DateSetting from "./DateSetting.js";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./CurrentWeather.css";
@@ -12,6 +13,7 @@ let [temperature, setTemperature] = useState(null);
  let [wind, setWind] = useState(null);
  let [description, setDescription] = useState(null);
  let [icon, setIcon] = useState(null);
+ let [currentDate, setCurrentDate] = useState(null);
 
 
  function showCurrentWeather (response) {
@@ -22,6 +24,7 @@ let [temperature, setTemperature] = useState(null);
   setTemperature (Math.round(response.data.main.temp));
   setWind(Math.round(response.data.wind.speed * 3.6));
   setDescription(response.data.weather[0].description);
+  setCurrentDate(new Date(response.data.dt));
   setReady(true);
 };
 
@@ -30,7 +33,7 @@ let [temperature, setTemperature] = useState(null);
     return (  <div>
       <div className="row">
         <div className="col-12">
-    <p>date</p>
+    <p><DateSetting date={currentDate} /></p>
         </div>
       </div>
         <div className="col-xs-6" id="weatherIcon">
