@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./CurrentWeather.css";
+
 export default function CurrentWeather (props) {
 
  let [ready, setReady] = useState(null);
@@ -9,6 +10,7 @@ let [temperature, setTemperature] = useState(null);
  let [wind, setWind] = useState(null);
  let [description, setDescription] = useState(null);
  let [icon, setIcon] = useState(null);
+
 
  function showCurrentWeather (response) {
   let imageURL = `https://openweathermap.org/img/wn/${
@@ -24,6 +26,11 @@ let [temperature, setTemperature] = useState(null);
   
   if (ready){
     return (  <div>
+      <div className="row">
+        <div className="col-12">
+    <p>date</p>
+        </div>
+      </div>
         <div className="col-xs-6" id="weatherIcon">
           {icon}
         </div>

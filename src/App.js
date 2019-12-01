@@ -21,11 +21,7 @@ function App() {
       <div>
         <SearchForm />
       </div>
-      <div className="row">
-        <div className="col-12">
-          <p id="currentDate" />
-        </div>
-      </div>
+      
       <hr />
       <Forecast />
     </div>
