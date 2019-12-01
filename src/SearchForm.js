@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SearchForm () {
 
-  let [city, setCity] = useState(null);
+  let [city, setCity] = useState("Porto");
 
   function handleSubmit (event) {
     event.preventDefault();
