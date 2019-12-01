@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Loader from 'react-loader-spinner';
 import TemperatureSetting from "./TemperatureSetting.js";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -59,4 +60,12 @@ let [temperature, setTemperature] = useState(null);
 } else {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.chosenCity}&appid=011674ac65e3e0ef6d73be0d4fdbae64&units=metric`;
   axios.get(url).then(showCurrentWeather);
-  return "Loading..."}}
+  return ( <Loader
+              type="Puff"
+              color="#00BFFF"
+              height={100}
+              width={100}
+              timeout={3000} //3 secs
+          />)
+          }
+}
