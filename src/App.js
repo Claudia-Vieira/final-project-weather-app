@@ -4,7 +4,6 @@ import SearchForm from './SearchForm.js';
 import CurrentWeather from './CurrentWeather.js';
 import Forecast from './Forecast.js';
 import './App.css';
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
