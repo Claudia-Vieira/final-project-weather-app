@@ -24,21 +24,17 @@ export default function SearchFOrm () {
           </div>
         </div>
         <div id="forecast">
-          <div className="row">
             <Day value={1} />
-          </div>
-          <div className="row">
+          
             <Day value={2} />
-          </div>
-          <div className="row">
+        
+          
             <Day value={3} />
-          </div>
-          <div className="row">
+         
             <Day value={4} />
-          </div>
-          <div className="row">
+        
             <Day value={5} />
-          </div>
+   
         </div>
       </div>)
 };

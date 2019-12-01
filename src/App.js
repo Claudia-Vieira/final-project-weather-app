@@ -1,5 +1,5 @@
 import React from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import SearchForm from './SearchForm.js';
 import CurrentWeather from './CurrentWeather.js';
 import Forecast from './Forecast.js';
