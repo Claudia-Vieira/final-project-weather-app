@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SearchForm from './SearchForm.js';
-import CurrentWeather from './CurrentWeather.js';
+
 import Forecast from './Forecast.js';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,9 +25,6 @@ function App() {
         <div className="col-12">
           <p id="currentDate" />
         </div>
-      </div>
-      <div className="row">
-        <CurrentWeather />
       </div>
       <hr />
       <Forecast />

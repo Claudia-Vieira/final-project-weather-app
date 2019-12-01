@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./CurrentWeather.css";
-export default function CurrentWeather () {
+export default function CurrentWeather (props) {
 
  let [ready, setReady] = useState(null);
 let [temperature, setTemperature] = useState(null);
@@ -60,6 +60,6 @@ let [temperature, setTemperature] = useState(null);
         </div>
       </div>);
 } else {
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=Porto&appid=011674ac65e3e0ef6d73be0d4fdbae64&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.chosenCity}&appid=011674ac65e3e0ef6d73be0d4fdbae64&units=metric`;
   axios.get(url).then(showCurrentWeather);
   return "Loading..."}}
