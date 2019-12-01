@@ -35,11 +35,11 @@ let [temperature, setTemperature] = useState(null);
                 {temperature}
                   </span>
                 <span className="weatherUnit">
-                  <a href="#" id="celsius">
+                  <a href="/" id="celsius">
                     ºC
                   </a>
                   |
-                  <a href="#" id="fahrenheit">
+                  <a href="/" id="fahrenheit">
                     ºF
                   </a>
                 </span>
@@ -48,7 +48,7 @@ let [temperature, setTemperature] = useState(null);
           </div>
           <div className="row">
             <div className="col-12">
-              <h2 id="currentWeather"> {description}</h2>
+              <h2 className="text-capitalize" id="currentWeather"> {description}</h2>
             </div>
           </div>
           <div className="row">

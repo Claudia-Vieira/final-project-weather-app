@@ -1,18 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import "./SearchForm.css";
 import CityIcon from "./cityIcon.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SearchForm () {
+
+  let [city, setCity] = useState("City");
+
+  function handleSubmit (event) {
+    event.preventDefault();
+  }
+
+  function provideCityName (event) {
+    event.preventDefault();
+setCity (event.target.value);
+  }
+
     return ( <div className="row">
     <div className="col-xs-6">
-      <form id="searchForm">
+      <form id="searchForm" onSubmit={handleSubmit}>
         <img src={CityIcon} alt="cityIcon" className="cityIcon" />
         <input
           type="search"
           placeholder="Enter city"
           id="enterCity"
           autoComplete="off"
+          onChange = {provideCityName}
         />
         <button id="searchButton">
         <FontAwesomeIcon icon="search" id="searchIcon"/>
@@ -25,7 +38,7 @@ export default function SearchForm () {
       </button>
     </div>
     <div className="col-12">
-      <h5 id="currentCity" />
+      <h5 id="currentCity">{city} </h5>
     </div>
   </div>);
 };
