@@ -16,7 +16,7 @@ export default function SearchForm () {
   setCity (event.target.value);
   }
 
-    return ( <div>
+  return ( <div>
       <div className="row">
     <div className="col-xs-6">
       <form id="searchForm" onSubmit={handleSubmit}>

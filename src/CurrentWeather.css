@@ -3,18 +3,6 @@
     text-align: center;
     padding: 50px;
   }
-  #currentTemperature {
-    font-size: 100px;
-    padding: 20px;
-  }
-  .weatherUnit {
-    font-size: 30px;
-    position: relative;
-    top: -50px;
-  }
-  #celsius #fahrenheit {
-    cursor: pointer;
-  }
   #currentWeather {
     text-align: left;
   }

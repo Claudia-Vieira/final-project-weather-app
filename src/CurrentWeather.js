@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import TemperatureSetting from "./TemperatureSetting.js";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./CurrentWeather.css";
@@ -38,18 +39,7 @@ let [temperature, setTemperature] = useState(null);
           <div className="row">
             <div className="col-xs-12">
               <h1>
-                <span id="currentTemperature">
-                {temperature}
-                  </span>
-                <span className="weatherUnit">
-                  <a href="/" id="celsius">
-                    ºC
-                  </a>
-                  |
-                  <a href="/" id="fahrenheit">
-                    ºF
-                  </a>
-                </span>
+<TemperatureSetting temperature={temperature}/>
               </h1>
             </div>
           </div>
