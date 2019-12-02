@@ -8,9 +8,8 @@ export default function CurrentWeather (props) {
     return (  
     <div>
       <div className="row">
-        <div className="col-xs-6" id="weatherIcon">
-          {props.chosenIcon}
-        </div>
+      <div className="col-xs-6">
+{props.chosenIcon} </div>
         <div className="col-xs-6">
           <div className="row">
             <div className="col-xs-12">
@@ -25,10 +24,8 @@ export default function CurrentWeather (props) {
             </div>
           </div>
           <div className="row">
-            <div className="col-xs-4">
-            <FontAwesomeIcon icon="wind" className="currentWind" />
-              <span id="wind"> {props.chosenWind} km/h</span>
-            </div>
+            <span id="wind"> <FontAwesomeIcon icon="wind" className="currentWind" />
+               {props.chosenWind} km/h</span>
           </div>
         </div>
       </div>

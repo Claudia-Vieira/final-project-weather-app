@@ -1,8 +1,9 @@
 import React from "react";
 
 export default function Date (props) {
-    let now = props.currentDate;
-    console.log (now);
+
+  if (props.currentDate) {
+    let currentDate = props.currentDate;
     let days = [
         "Sunday",
         "Monday",
@@ -12,15 +13,16 @@ export default function Date (props) {
         "Friday",
         "Saturday"
       ];
-      let day = days[now.getDay()];
-      let hour = now.getHours();
+      let day = days[currentDate.getDay()];
+      let hour = currentDate.getHours();
       if (hour < 10) {
         hour = `0${hour}`;
       }
-      let minutes = now.getMinutes();
+      let minutes = currentDate.getMinutes();
       if (minutes < 10) {
         minutes = `0${minutes}`;
       }
 return ( <div className="currentDate">
   {day} {hour}:{minutes} </div>)
 }
+return (<div className="currentDate"></div>)}
