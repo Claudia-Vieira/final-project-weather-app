@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
-import CurrentWeather from './CurrentWeather.js';
-import DateSetting from "./DateSetting.js";
+import WeatherLayout from './WeatherLayout.js';
+
 import "./SearchForm.css";
 import CityIcon from "./cityIcon.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -71,11 +71,11 @@ setSubmitingDate(new Date(response.data.dt*1000));
       <h5 id="currentCity">{currentCity}</h5>
     </div>
   <div className="col-12 date">
-  <DateSetting currentDate={submitingDate} />
+
         </div>
         </div>
   <div className="row">
-  <CurrentWeather chosenCity={currentCity} chosenIcon={icon} chosenTemperature={temperature} chosenDescription={description} chosenWind={wind}/>
+  <WeatherLayout chosenCity={currentCity} chosenIcon={icon} chosenTemperature={temperature} chosenDescription={description} chosenWind={wind}/>
 </div>
 </div>);} else {return ( <div>
       <div className="row">

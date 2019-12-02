@@ -2,7 +2,7 @@ import React from "react";
 import TemperatureSetting from "./TemperatureSetting.js";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import "./CurrentWeather.css";
+import "./WeatherLayout.css";
 
 export default function CurrentWeather (props) {
     return (  
