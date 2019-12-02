@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import WeatherLayout from './WeatherLayout.js';
 import DateSetting from "./DateSetting.js";
+import Forecast from "./Forecast.js"
 import "./SearchForm.css";
 import CityIcon from "./cityIcon.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -24,6 +25,7 @@ export default function SearchForm () {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=011674ac65e3e0ef6d73be0d4fdbae64&units=metric`;
   axios.get(url).then(showInformation);
 
+
   }
 
   function showInformation(response) {
@@ -39,6 +41,7 @@ export default function SearchForm () {
     setDescription(response.data.weather[0].description);
     setSubmitingDate(new Date(response.data.dt*1000));
         };
+
 
   function provideCityName (event) {
   setCity (event.target.value);
@@ -76,6 +79,8 @@ export default function SearchForm () {
   <div className="row">
   <WeatherLayout chosenCity={currentCity} chosenIcon={icon} chosenTemperature={temperature} chosenDescription={description} chosenWind={wind}/>
 </div>
+<hr />
+      <Forecast chosenCity={currentCity}/>
 </div>);} else {return ( <div>
       <div className="row">
     <div className="col-xs-6">
@@ -102,5 +107,6 @@ export default function SearchForm () {
       <h5 id="currentCity">{currentCity}</h5>
     </div>
   </div>
-  <div className="row"></div> </div>)}
+  <div className="row"></div>
+  <Forecast /></div>)}
 };

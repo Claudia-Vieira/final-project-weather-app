@@ -1,6 +1,5 @@
 import React from "react";
 import TemperatureSetting from "./TemperatureSetting.js";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./WeatherLayout.css";
 
