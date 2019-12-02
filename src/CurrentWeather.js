@@ -32,8 +32,8 @@ let [temperature, setTemperature] = useState(null);
   if (ready){
     return (  <div>
       <div className="row">
-        <div className="col-12">
-    <p><DateSetting date={currentDate} /></p>
+        <div className="col-12 date">
+  <DateSetting date={currentDate} />
         </div>
       </div>
         <div className="col-xs-6" id="weatherIcon">
