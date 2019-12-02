@@ -9,7 +9,7 @@ export default function SearchForm () {
 
   let [city, setCity] = useState("Porto");
   let [currentCity, setCurrentCity] = useState ("City");
-  let [information, setInformation] = useState (null)
+  let [informationReady, setInformationReady] = useState (null);
 
   function handleSubmit (event) {
     event.preventDefault();
@@ -17,6 +17,7 @@ export default function SearchForm () {
 
     function showInformation(response) {
 setCurrentCity (response.data.name);
+setInformationReady(true);
     };
 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=011674ac65e3e0ef6d73be0d4fdbae64&units=metric`;
@@ -27,7 +28,7 @@ setCurrentCity (response.data.name);
   setCity (event.target.value);
   }
 
-  return ( <div>
+  if (informationReady) {return ( <div>
       <div className="row">
     <div className="col-xs-6">
       <form id="searchForm" onSubmit={handleSubmit}>
@@ -54,7 +55,33 @@ setCurrentCity (response.data.name);
     </div>
   </div>
   <div className="row">
-  <CurrentWeather chosenCity={city}/>
+  <CurrentWeather chosenCity={currentCity}/>
 </div>
-</div>);
+</div>);} else {return ( <div>
+      <div className="row">
+    <div className="col-xs-6">
+      <form id="searchForm" onSubmit={handleSubmit}>
+        <img src={CityIcon} alt="cityIcon" className="cityIcon" />
+        <input
+          type="search"
+          placeholder="Enter city"
+          id="enterCity"
+          autoComplete="off"
+          onChange = {provideCityName}
+        />
+        <button id="searchButton">
+        <FontAwesomeIcon icon="search" id="searchIcon"/>
+        </button>
+      </form>
+    </div>
+    <div className="col-xs-4">
+      <button id="currentLocation">
+      <FontAwesomeIcon icon="map-marker-alt" id="mapMarkerIcon"/>
+      </button>
+    </div>
+    <div className="col-12">
+      <h5 id="currentCity">{currentCity}</h5>
+    </div>
+  </div>
+  <div className="row"></div> </div>)}
 };
