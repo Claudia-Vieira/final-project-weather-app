@@ -5,11 +5,10 @@ import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faWind } from '@fortawesome/free-solid-svg-icons'
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faSearch, faMapMarkerAlt, faWind, faDotCircle);
+library.add(fab, faSearch, faWind, faDotCircle);
 
 
 function App() {
