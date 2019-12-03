@@ -93,11 +93,6 @@ export default function SearchForm () {
         </button>
       </form>
     </div>
-    <div className="col-xs-4">
-      <button id="currentLocation">
-      <FontAwesomeIcon icon="map-marker-alt" id="mapMarkerIcon"/>
-      </button>
-    </div>
     <div className="col-12">
       <h5 id="currentCity">{currentCity}</h5>
     </div>
